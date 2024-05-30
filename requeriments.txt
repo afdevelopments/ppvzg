@@ -1,0 +1,9 @@
+tensorflow==2.16.1
+pandas
+numpy
+scikit-learn
+joblib
+statsmodels
+django
+django-crispy-forms
+crispy-bootstrap5

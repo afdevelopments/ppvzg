@@ -1,0 +1,12 @@
+{% extends 'predictions/base.html' %}
+
+{% block content %}
+<div class="container mt-5">
+    <h1>Resultado de la Predicción</h1>
+    <p>El precio predicho para la vivienda es: {{ price }}</p>
+    <div>
+        <a href="{% url 'predict' %}" class="btn btn-primary">Hacer otra predicción</a>
+        <a href="{% url 'home' %}" class="btn btn-secondary">Volver al inicio</a>
+    </div>
+</div>
+{% endblock %}

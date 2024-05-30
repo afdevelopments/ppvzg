@@ -1,0 +1,13 @@
+{% extends 'predictions/base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+<div class="container mt-5">
+    <h1>Formulario de Predicción</h1>
+    <form method="POST" action="{% url 'predict' %}" class="needs-validation" novalidate>
+        {% csrf_token %}
+        {{ form|crispy }}
+        <button type="submit" class="btn btn-success">Predecir Precio</button>
+    </form>
+    <a href="{% url 'home' %}" class="btn btn-secondary mt-3">Volver al inicio</a>
+</div>
+{% endblock %}

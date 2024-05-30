@@ -1,0 +1,22 @@
+{% extends 'predictions/base.html' %}
+{% load static %}
+
+{% block extra_css %}
+<style>
+    .hero-background {
+        background: url('{% static "predictions/images/home-background.jpg" %}') no-repeat center center;
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)), url('{% static "predictions/images/home-background.jpg" %}');
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="hero-background">
+    <div class="hero-content">
+        <h1>Bienvenido a la Predicción de Precios de Vivienda</h1>
+        <p>Utiliza nuestro modelo para predecir precios de viviendas basado en varias características.</p>
+        <button id="start-prediction" class="btn btn-primary btn-lg" data-url="{% url 'predict' %}">Comenzar la predicción</button>
+
+    </div>
+</div>
+{% endblock %}
